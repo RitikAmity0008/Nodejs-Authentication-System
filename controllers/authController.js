@@ -195,8 +195,8 @@ module.exports.forgotPassword = async (req, res) => {
     let token = jwt.sign({ userId: user._id }, secret, {
       expiresIn: "15m",
     });
-    // const link = `https://gauravnodejsauthentication.onrender.com/resetPassword/${user._id}/${token}`;
-    const link = `http://localhost:5000/resetPassword/${user._id}/${token}`;
+    const link = `https://nodejs-authentication-system-hf37.onrender.com/resetPassword/${user._id}/${token}`;
+    // const link = `http://localhost:5000/resetPassword/${user._id}/${token}`;
     
     //...................................Nodemailer code.......................................//
     const transporter = nodemailer.createTransport({
